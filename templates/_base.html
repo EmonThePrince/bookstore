@@ -1,0 +1,22 @@
+<!-- templates/_base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bookstore{% endblock title %}</title>
+    {% comment %} <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Example for linking a CSS file --> {% endcomment %}
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Bookstore</h1> <!-- Optional header -->
+    </header>
+    <main class="container">
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <footer>
+        <p>&copy; {{ current_year }} Bookstore</p> <!-- Example footer -->
+    </footer>
+</body>
+</html>
